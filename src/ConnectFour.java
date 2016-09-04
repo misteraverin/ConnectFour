@@ -33,7 +33,7 @@ public class ConnectFour extends JFrame {
     private Seed currentPlayer;
     private GameState currentState;
     private JLabel StatusBar;
-    private JLabel alertMessage;
+
     private DrawCanvas canvas;
 
     public void initGame() {
@@ -151,9 +151,7 @@ public class ConnectFour extends JFrame {
                     StatusBar.setText("Yellow's turn to make a move");
             } else if (currentState == GameState.YELLOW_WIN) {
                 StatusBar.setForeground(Color.RED);
-                alertMessage.setVisible(true);
-                alertMessage.setText("Game over! Yellow wins. Click to play new game.");
-                // StatusBar.setText("Game over! Yellow wins. Click to play new game.");
+                 StatusBar.setText("Game over! Yellow wins. Click to play new game.");
             } else if (currentState == GameState.RED_WIN) {
                 StatusBar.setForeground(Color.RED);
                 StatusBar.setText("Game over!Draw. Red wins. Click to play new game.");
