@@ -202,20 +202,24 @@ public class ConnectFour extends JFrame {
             } else {
                 currentScore = 0;
             }
-        return false;
-        /*// check cross-diagonal
+
+
         currentScore = 1;
-        for (int up = 1; rowSelected + up < ROWS; up++)
+        for (int up = 1; rowSelected + up < ROWS && colSelected + up < COLS; up++)
             if (board[rowSelected + up][colSelected + up] != player)
                 break;
             else
                 currentScore++;
-
-        for (int down = 1; rowSelected - down < ROWS; down++)
+        if (currentScore >= 4)
+            return true;
+        currentScore = 1;
+        for (int down = 1; rowSelected - down >= 0&& colSelected - down >= 0; down++)
             if (board[rowSelected - down][colSelected - down] != player) break;
             else currentScore++;
         if (currentScore >= 4)
             return true;
+
+
         // check main-diagonal
         currentScore = 1;
         for (int up = 1; rowSelected - up >= 0 && colSelected + up < COLS; up++)
@@ -223,11 +227,12 @@ public class ConnectFour extends JFrame {
                 break;
             else
                 currentScore++;
-
+        if(currentScore >= 4) return true;
+        currentScore = 1;
         for (int down = 1; rowSelected + down < ROWS && colSelected - down >= 0; down++)
             if (board[rowSelected + down][colSelected - down] != player) break;
             else currentScore++;
-        return currentScore >= 4;*/
+        return currentScore >= 4;
     }
 
 
