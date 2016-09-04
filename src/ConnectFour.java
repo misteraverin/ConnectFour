@@ -151,13 +151,13 @@ public class ConnectFour extends JFrame {
                     StatusBar.setText("Yellow's turn to make a move");
             } else if (currentState == GameState.YELLOW_WIN) {
                 StatusBar.setForeground(Color.RED);
-                 StatusBar.setText("Game over! Yellow wins. Click to play new game.");
+                StatusBar.setText("Game over! Yellow wins. Click to play new game.");
             } else if (currentState == GameState.RED_WIN) {
                 StatusBar.setForeground(Color.RED);
-                StatusBar.setText("Game over!Draw. Red wins. Click to play new game.");
+                StatusBar.setText("Game over! Red wins. Click to play new game.");
             } else if (currentState == GameState.DRAW) {
                 StatusBar.setForeground(Color.RED);
-                StatusBar.setText("Game over!Draw. Click to play new game.");
+                StatusBar.setText("Game over! Draw. Click to play new game.");
             }
 
 
